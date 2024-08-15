@@ -7,6 +7,7 @@ import { BusinessModule } from './business/business.module';
 import { Dialect } from 'sequelize';
 import { Users } from './common/entities';
 import { LocalStrategy } from './common/auth/local.strategy';
+import { ClinicsModule } from './business/clinics.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { LocalStrategy } from './common/auth/local.strategy';
       expandVariables: true,
       envFilePath: ['prod.env', '.env'],
     }),
+    ClinicsModule,
     BusinessModule,
     DataAccessModule,
     DistributionModule,
@@ -23,7 +25,7 @@ import { LocalStrategy } from './common/auth/local.strategy';
       autoLoadModels: true,
       synchronize: true,
       dialect: process.env.DATABASE_DIALECT as Dialect,
-      port: 5432,
+      port: 3306,
       host: process.env.DATABASE_HOST,
       username: process.env.DATABASE_USERNAME,
       password: process.env.DATABASE_PASSWORD,

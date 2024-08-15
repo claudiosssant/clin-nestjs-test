@@ -8,10 +8,11 @@ import { APP_GUARD } from '@nestjs/core';
 import { BusinessModule } from 'src/business/business.module';
 import { HealthCheckController } from './rest-api/healthcheck.controller';
 import { ClinicController } from './rest-api/clinic.controller';
+import { ClinicsModule } from 'src/business/clinics.module';
 
 @Module({
   controllers: [HealthCheckController, UsersController, AuthController, ClinicController],
-  imports: [BusinessModule, PassportModule],
+  imports: [BusinessModule, PassportModule, ClinicsModule],
   providers: [
     JwtStrategy,
     {

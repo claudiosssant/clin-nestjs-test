@@ -2,7 +2,7 @@ module.exports = {
   development: {
     dialect: process.env.DATABASE_DIALECT,
     host: process.env.DATABASE_HOST,
-    port: 5432,
+    port: 3306,
     username: process.env.DATABASE_USERNAME,
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE_NAME,
@@ -10,7 +10,7 @@ module.exports = {
   test: {
     dialect: process.env.DATABASE_DIALECT,
     host: process.env.DATABASE_HOST,
-    port: 5432,
+    port: 3306,
     username: process.env.DATABASE_USERNAME,
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE_NAME,
@@ -18,7 +18,7 @@ module.exports = {
   production: {
     dialect: process.env.DATABASE_DIALECT,
     host: process.env.DATABASE_HOST,
-    port: 5432,
+    port: 3306,
     username: process.env.DATABASE_USERNAME,
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE_NAME,
